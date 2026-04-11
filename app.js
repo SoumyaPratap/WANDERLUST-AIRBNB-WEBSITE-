@@ -13,7 +13,7 @@ const User = require("./models/user.js");
 const Listing = require("./models/listing.js");
 const Review = require("./models/reviews.js");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderLust";
+const MONGO_URL = "mongodb+srv://soumyadb:Soumya123@freecluster.yk1ijab.mongodb.net/wanderLust";
 
 
 // ============================
@@ -93,7 +93,7 @@ app.use((req,res,next)=>{
 // ============================
 
 app.get("/", (req, res) => {
-    res.send("Hii I am root");
+    res.redirect("/listings");
 });
 
 
