@@ -1,0 +1,143 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container mt-4">
+
+    <!-- Title -->
+    <h3><%= listing.title %></h3>
+
+    <!-- Listing Card -->
+    <div class="card mb-3 listing-card">
+        <div class="row g-0">
+
+            <!-- Image -->
+            <div class="col-md-6">
+                <img 
+                src="<%= listing.image.url %>" 
+                class="img-fluid rounded-start listing-img"
+                alt="listing image">
+            </div>
+
+            <!-- Details -->
+            <div class="col-md-6">
+                <div class="card-body">
+
+                    <p class="card-text">
+                        <%= listing.description %>
+                    </p>
+
+                    <h5>₹ <%= listing.price %></h5>
+
+                    <p><%= listing.location %></p>
+
+                    <p><%= listing.country %></p>
+
+                    <a 
+                    href="/listings/<%= listing._id %>/edit"
+                    class="btn btn-danger">
+                    Edit
+                    </a>
+
+                    <form 
+                    method="POST"
+                    action="/listings/<%= listing._id %>?_method=DELETE"
+                    style="display:inline;">
+
+                        <button class="btn btn-dark">
+                            Delete
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <hr>
+
+<h4>Leave a Review</h4>
+
+<form 
+action="/listings/<%= listing._id %>/reviews" 
+method="POST" 
+class="needs-validation"
+novalidate
+>
+
+<div class="mb-3">
+
+<label class="form-label">Rating</label>
+
+<input
+type="range"
+class="form-range"
+min="1"
+max="5"
+name="review[rating]"
+required
+>
+
+<div class="invalid-feedback">
+Please provide rating.
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">Comments</label>
+
+<textarea
+name="review[comment]"
+class="form-control"
+required
+></textarea>
+
+<div class="invalid-feedback">
+Please enter a comment.
+</div>
+
+</div>
+
+<button class="btn btn-dark">Submit</button>
+
+</form>
+<hr>
+
+<hr>
+
+<h4>All Reviews</h4>
+
+<% for(let review of listing.reviews){ %>
+
+<div class="card mb-3">
+
+<div class="card-body">
+
+<p>
+Rating: <%= review.rating %> ⭐
+</p>
+
+<p>
+<%= review.comment %>
+</p>
+
+<form 
+action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" 
+method="POST"
+>
+
+<button class="btn btn-sm btn-danger">
+Delete
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<% } %>

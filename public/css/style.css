@@ -1,0 +1,179 @@
+/* body{
+    background-color: pink;
+} */
+ /* navbar */
+ .navbar{
+    height:5rem;
+    background-color: white;
+ }
+
+ .fa-compass{
+    color:#fe424d;
+    font-size:2rem;
+
+ }
+
+ .nav-link{
+   color: #222222 !important;
+ }
+ /* footer */
+ .f-info-links a {
+    text-decoration:none;
+    color:#222222;
+ }
+ .f-info-links a:hover {
+    text-decoration:underlined;
+    
+ }
+ .f-info-links{
+    width:100%;
+ }
+
+ .f-info-socials{
+    width: 100%;
+    
+    margin-right: 2rem;
+ }
+ .f-info-socials i{
+    margin-right:1rem;
+    font-size:1.2rem;
+
+ }
+
+ .f-info{
+    text-align: center;
+    height:8rem;
+    background-color: #ebebeb;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: space-evenly;
+
+
+ }
+
+ html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* agar horizontal scroll aa raha ho toh */
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* cards */
+.card{
+    border:none !important;
+    margin-bottom:2rem;
+   
+
+     
+}
+
+.card-img-top{
+    border-radius:1rem;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+   paddind:0 !important;
+
+}
+.card-text p{
+    font-size: 400 !important;
+}
+
+.listing-card{
+border: none;
+border-radius: 15px;
+overflow: hidden;
+transition: all 0.3s ease;
+}
+
+.listing-card:hover{
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.listing-img{
+height: 20rem;
+object-fit: cover;
+transition: transform 0.4s;
+}
+
+.listing-card:hover .listing-img{
+transform: scale(1.05);
+}
+
+.card-body{
+padding: 10px;
+}
+.listing-link{
+text-decoration: none;
+color: black;
+}
+
+.listing-card{
+border:none;
+border-radius:15px;
+overflow:hidden;
+transition:all 0.3s ease;
+}
+
+.listing-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+.listing-img{
+border-radius:15px 15px 0 0;
+height:20rem;
+object-fit:cover;
+transition:transform 0.4s;
+}
+
+.listing-card:hover .listing-img{
+transform:scale(1.05);
+}
+
+.price{
+font-weight:600;
+}
+
+/* SEARCH BAR */
+
+.search-bar input{
+border-radius:25px;
+padding:6px 15px;
+border:1px solid #ddd;
+}
+
+.search-btn{
+border-radius:25px;
+background-color:#ff385c;
+color:white;
+border:none;
+padding:6px 15px;
+}
+
+.search-btn:hover{
+background-color:#e03150;
+}
+
+/* show page */
+.show-img{
+   height:30vh;
+}
+
+
+
+
+
+
+
+
+
